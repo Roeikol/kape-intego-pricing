@@ -1,0 +1,57 @@
+.mainContainer {
+    display: flex;
+    gap: 24px;
+
+    .leftTextContainer {
+        width: 558px;
+
+        .textsContainer {
+            display: flex;
+            flex-direction: column;
+            gap: 36px;
+
+            .textAndLogoContainer {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+
+    .rightImageContainer {
+        width: 558px;
+        display: flex;
+    }
+
+    .expertManImage {
+        width: 100%;
+        height: 100%;
+        max-width: 558px;
+        max-height: 578px;
+    }
+
+    .mainTitle {
+        margin-bottom: 40px;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .mainContainer {
+        flex-direction: column;
+        text-align: center;
+        padding: 0 21px;
+    }
+    
+    .leftTextContainer, .rightImageContainer {
+        width: 100% !important;
+    }
+
+    .centerLogo {
+        margin: 0 auto;
+    }
+
+    .expertManImage {
+        max-width: 360px !important;
+        max-height: 369px !important;
+    }
+
+}

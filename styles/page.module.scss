@@ -1,0 +1,43 @@
+.pricingContainer {
+  margin-top: 47px;
+}
+
+.virusBullentinContainer {
+  margin-top: 102px;
+}
+
+.expertsSayingContainer {
+  margin-top: 156px;
+}
+
+.servicesContainer {
+  margin-top: 124px;
+}
+
+.faqContainer {
+  margin-top: 139px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .pricingContainer {
+    margin-top: 28px;
+  }
+
+  .virusBullentinContainer {
+    margin-top: 69px;
+  }
+
+  .expertsSayingContainer {
+    margin-top: 80px;
+  }
+
+  .servicesContainer {
+    margin-top: 71px;
+    padding-right: 16px;
+    padding-left: 10px;
+  }
+
+  .faqContainer {
+    margin-top: 97px;
+  }
+}

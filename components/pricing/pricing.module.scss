@@ -1,0 +1,201 @@
+.main {
+    display: flex;
+    flex-direction: column;
+
+    .pricingPackagesContainer{
+        display: grid;
+        column-gap: 24px;
+        grid-template-columns: auto auto auto;
+        margin: 170px auto 0 auto;
+
+        .priceItemConainer {
+            background-color: white;
+            border-radius: 24px;
+            display: flex;
+            flex-direction: column;
+            width: 364px;
+            padding: 0 31px 20px 31px;
+            position: relative;
+            box-shadow: 4px 12px 40px rgba(8, 27, 62, 0.09);
+
+            .discountAndImageContainer {
+                display: flex;
+                position: absolute;
+                margin-left: auto;
+                margin-right: auto;
+                left: 0;
+                right: 0;
+
+                .discountContainer {
+                    width: 90px;
+                    height: 90px;
+                    background-color: #F72928;
+                    border-radius: 50%;
+                    display: flex;
+                    position: absolute;
+                    top: -70px;
+                    left: 51px;
+                    z-index: 1;
+
+                    .discountText {
+                        margin: auto;
+                        
+                        .discount {
+                            color: white;
+                            margin: auto;
+                        }
+
+                    }
+                }
+                
+                .discountContainerMoreOffset {
+                    left: 39px;
+                }
+
+                .antivirusImage {
+                    position: absolute;
+                    top: -59px;
+                    margin-left: auto;
+                    margin-right: auto;
+                    left: 0;
+                    right: 0;
+                    width: fit-content;
+                }
+                
+            }
+
+            .bestValueContainer {
+                margin: 130px auto 0 auto;
+                border-radius: 50px 0px;
+                width: 152px;
+                height: 26px;
+                display: flex;
+            }
+
+            .bestValueBackground {
+                background: linear-gradient(88.07deg, #97DCF0 34.81%, #9BDEEF 34.82%, #B9F2E9 86.23%);
+                box-shadow: 0px 4px 14px rgba(162, 236, 255, 0.6);
+            }
+
+            .mainInfo {
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+
+                .yearlyPrice {
+                    color: #7E7E9C;
+                    font-size: 13px;
+                    margin-bottom: 13px;
+
+                    .yearlyNewPrice {
+                        font-weight: 700;
+                    }
+
+                    .yearlyOldPrice {
+                        text-decoration-line: line-through;
+                    }
+                }
+
+                .buyNow {
+                    color: #454557;
+                    font-weight: 700;
+                    font-size: 20px;
+                    width: 260px;
+                    height: 54px;
+                    border: 1px solid #454557;
+                    border-radius: 8px;
+                    background-color: white;
+                    margin: 0 auto 8px auto;
+                    cursor: pointer;
+                }
+
+                .buyNowHighlight {
+                    background-image: linear-gradient(#FFD800, #FFA700);
+                }
+
+                .moneyBackContainer {
+                    display: flex;
+                    margin: auto;
+                }
+            }
+
+            .seprator {
+                margin: 32px 0;
+                background-color: #DDDDDD;
+                height: 1px;
+                width: 300px;
+            }
+
+            .featureItem {
+                display: flex;
+                margin-bottom: 14px;
+
+                .featrueTitleTextWrapper {
+                   
+                }
+
+                .featrueTitleTextWrapperHighlight {
+                    margin: auto 0;
+                }
+
+
+                .featureTitle {
+                    font-weight: 700;
+                    color: #454557;
+                }
+
+                .featureText {
+                    font-weight: 500;
+                    color: #454557;
+                }
+
+                .smallSizeText {
+                    font-size: 15px;
+                }
+
+                .mediumSizeText {
+                    font-size: 16px;
+                }
+
+                .highlightText {
+                    color: #F72928;
+
+                }
+            }
+
+            .highlightBackground {
+                background: rgba(255, 192, 1, 0.1);
+                border-radius: 10px;
+                height: 52px;
+                margin: 0 -17px 14px -17px;
+            }
+        
+
+        }
+
+        .priceItemConainerHighlight {
+            border: 3px solid #FFD701;
+        }
+    }
+
+}
+
+@media only screen and (max-width: 1200px) {
+    .mainTitle {
+        font-size: 28px !important;
+        margin-bottom: 12px !important;
+    }
+
+    .mainSubTitle {
+        font-size: 16px !important;
+    }
+
+    .pricingPackagesContainer {
+        row-gap: 84px;
+        margin: 129px auto 0 auto !important;
+    }
+    
+    .priceItemConainer {
+        grid-column: 1/3;
+    }
+}

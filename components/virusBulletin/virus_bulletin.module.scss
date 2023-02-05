@@ -1,0 +1,102 @@
+.mainContainerDesktop {
+    background-color: #E8EFFC;
+    padding: 60px 44px;
+    border-radius: 24px;
+    display: block;
+
+    .subContainer {
+        background: white;
+        padding: 48px 107px 48px 48px;
+        display: flex;
+        justify-content: space-between;
+        color: #454557;
+        border-radius: 24px;
+        position: relative;
+
+        .awards {
+            display: flex;
+            gap: 36px;
+        }
+
+        .testResultsContainer {
+
+            .testResultsSubContainer {
+                display: flex;
+                
+                .separator {
+                    width: 1px;
+                    height: 72px;
+                    background: #0C9CDB;
+                    margin: 0 44px;
+                }
+            }
+        }
+        
+        .blueGradient {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+    }
+}
+
+.mainContainerMobile {
+    background-color: #E8EFFC;
+    min-height: 424px;
+    padding: 60px 44px;
+    display: none;
+
+    .awardsMobile {
+        display: flex;
+        gap: 48px;
+        flex-wrap: wrap;
+        margin-bottom: 83px;
+        justify-content: center;
+    }
+
+    .testResultsMobile {
+        padding: 30px 37px;
+        background-color: white;
+        border-radius: 24px;
+        position: relative;
+
+        .titleAndImageMobile {
+            display: flex;
+            gap: 22px;
+            margin-bottom: 30px;
+        }
+
+        .testResultsSubContainerMobile {
+            display: flex;
+
+            .separator {
+                width: 1px;
+                height: 72px;
+                background: #0C9CDB;
+                margin: 0 44px 0 36px;
+            }
+
+        }
+
+        .blueGradientMobile {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+    }
+
+}
+
+.blueGradientRadius {
+    border-radius: 24px;
+}
+
+@media only screen and (max-width: 1200px) {
+    .mainContainerDesktop {
+        display: none;
+    }
+    .mainContainerMobile {
+        display: block;
+    }
+}

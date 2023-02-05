@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css?family=Red+Hat+Display:regular,bold,italic&subset=latin,latin-ext');
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-image: url("/header_people.png");
+  background-repeat: no-repeat;
+  position: relative;
+
+  .mainContainer {
+    height: 100%;
+    width: 1140px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+  
+  @media only screen and (max-width: 1200px) {
+    .mainContainer {
+      width: 100%;
+    }
+  }
+}
+
+.pricingContainer {
+  margin-top: 47px;
+}
+
+.virusBullentinContainer {
+  margin-top: 102px;
+}
+
+.expertsSayingContainer {
+  margin-top: 156px;
+}
+
+.servicesContainer {
+  margin-top: 124px;
+}
+
+.faqContainer {
+  margin-top: 139px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .pricingContainer {
+    margin-top: 28px;
+  }
+
+  .virusBullentinContainer {
+    margin-top: 69px;
+  }
+
+  .expertsSayingContainer {
+    margin-top: 80px;
+  }
+
+  .servicesContainer {
+    margin-top: 71px;
+    padding-right: 16px;
+    padding-left: 10px;
+  }
+
+  .faqContainer {
+    margin-top: 97px;
+  }
+}

@@ -1,0 +1,35 @@
+.mainContainer {
+    height: 210px;
+    display: flex;
+
+    .footerBackground {
+        background-image: url("/footer_background_desktop.jpg");
+        background-repeat: no-repeat;
+        height: 210px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    .logoStyle {
+        position: relative;
+        margin: auto auto auto 0;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .mainContainer {
+        height: 210px;
+    }    
+
+    .footerBackground { 
+        background-image: url("/footer_background_mobile.jpg") !important;
+        background-size: cover;
+    }
+
+    .logoStyle {
+        margin: auto !important;   
+    }
+
+}
