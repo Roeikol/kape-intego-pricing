@@ -1,3 +1,5 @@
+# kape-intego-pricing
+
 This is a responsive pricing landing page with component-based styling using the NextJS framework with SASS.
 
 
