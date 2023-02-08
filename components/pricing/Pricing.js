@@ -4,6 +4,7 @@ import { TextUI } from "../../UIComponents/TextUI"
 import styles from "./pricing.module.scss"
 import { clsx } from 'clsx';
 import { useEffect, useState } from "react";
+import { PACKAGES_TYPES, PACKAGES_RESPONSE_INCLUDES } from "./constants";
 
 const pricingPackages = [
     {
@@ -243,18 +244,46 @@ export const Pricing = () => {
     useEffect(() => {
         (async ()=>{
             const response = await getPricingBundle()
-            updatePricing(response)
+            const responseValidation = validatePricingResponse(response);
+            if (!responseValidation) {
+                throw new Error(`HTTP error: bad response`);
+            }
+            updatePricing(response);
         })()
     }, []);
 
     const getPricingBundle = () => 
-        fetch("http://localhost:3001/pricing/getPriceByBundle/*/usd")
+        fetch("http://localhost:3001/pricing/getPriceByBundle/*/usd",{
+            method: "GET",
+            headers: {
+                "Authorization": "Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==" //hard coded credentials for demo
+            },
+        })
         .then((response) => {
             if (!response.ok) {
                 throw new Error(`HTTP error: ${response.status}`);
             }
             return response;
         }).then((r)=>r.json());
+    
+
+    const validatePricingResponse = (response) => {
+        const isValidate = PACKAGES_TYPES.map(type => {
+            if(response.hasOwnProperty(type)){
+                return validatePackagesIncludeContentResponse(response, type);
+            }else{
+                return false;
+            }
+         });
+         return isValidate.every(element => element);
+    }
+
+    const validatePackagesIncludeContentResponse = (response, type) => {
+        const isValidate = PACKAGES_RESPONSE_INCLUDES.map(element => {
+           return response[type].hasOwnProperty(element);
+         });
+         return isValidate.every(element => element);
+    }
 
     const updatePricing = (pricing) => {
         let tempPackages = pricingPackages;
