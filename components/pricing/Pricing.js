@@ -5,9 +5,11 @@ import styles from "./pricing.module.scss"
 import { clsx } from 'clsx';
 import { useEffect, useState } from "react";
 import { PACKAGES_TYPES, PACKAGES_RESPONSE_INCLUDES } from "./constants";
+import { updateUserClickedOnPackage } from "@/api/tracking";
 
 const pricingPackages = [
     {
+        id: 1,
         title: "Essential Protection",
         subTitle: "Windows PC Antivirus",
         pricePerMonth: "$1.67",
@@ -57,6 +59,7 @@ const pricingPackages = [
         }
     },
     {
+        id: 2,
         title: "Advanced Protection",
         subTitle: "Online Privacy Features:",
         pricePerMonth: "$2.50",
@@ -100,6 +103,7 @@ const pricingPackages = [
         }
     },
     {
+        id: 3,
         title: "Extended Protection",
         subTitle: "Windows PC Antivirus",
         pricePerMonth: "$1.67",
@@ -182,7 +186,7 @@ const PriceItem = ({priceItem}) => {
                 <span>{priceItem.yearsAmount} </span>
                 <span>{`year${priceItem.yearsAmount > 1 ? "s" : ""}`}</span>
             </div>
-            <button className={clsx({
+            <button onClick={() => updateUserClickedOnPackage(priceItem.id)} className={clsx({
                 [styles.buyNow]: true,
                 [styles.buyNowHighlight]: priceItem.buyNowHighlight,
             })}>

@@ -7,8 +7,15 @@ import { ExpertsSaying } from '@/components/expertsSaying/ExpertsSaying'
 import { Services } from '@/components/services/Services'
 import { FAQ } from '@/components/faq/Faq'
 import { Footer } from '@/components/footer/Footer'
+import { useEffect } from 'react'
+import { checkIfUUIDCookieExist } from '@/api/cookies'
 
 export default function Home() {
+
+  useEffect(() => {
+    checkIfUUIDCookieExist();
+  },[])
+
   return (
     <>
       <Head>
